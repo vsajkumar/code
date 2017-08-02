@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-offset-4 col-xs-8">
+			<h2>Animated Progress Bars</h2>
+		</div>
+	</div>
+	<div class="row" ng-repeat="(key,x) in resp.bars">
+		<div class="col-xs-offset-3 col-xs-6">
+			<div class="progress">
+				<div id=progressBar{{key+1}} class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow={{x}} aria-valuemin="0" aria-valuemax={{resp.limit}} style="width:{{x*limit}}%"><span class="barVal">{{x}}</span> </div>
+			</div>
+		</div>
+		<div class="col-xs-3"></div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12"> <select class="selectpicker btn-primary" id="selectedCourse" data-style="btn-primary">
+                <option ng-repeat="(key,x) in resp.bars" value=progressBar{{key+1}}>progressBar{{key+1}}</option>
+            </select> </div>
+	</div>
+	<div class="row btnRow">
+		<div class="col-xs-2 custButton" ng-repeat="(key,x) in resp.buttons"> <button class="btn btn-success changeProgress" ng-click="changeProgress($event)" value={{x}}>{{x}}</button> </div>
+	</div>
+</div>

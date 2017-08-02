@@ -1,0 +1,20 @@
+.progress-bar{
+    background-color: rgba(58, 164, 255, 0.37);
+    color: black;
+}
+.redBG{
+        background-color: red;
+}
+.barVal{
+    position: absolute;
+    left: 50%;
+}
+.btnRow{
+    margin-top: 15px;
+}
+.custButton{
+    margin-bottom: 10px;
+}
+.changeProgress {
+    outline: none;
+}
